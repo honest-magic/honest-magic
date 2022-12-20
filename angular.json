@@ -3,5 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "@honest-magic/pen": {
+      "projectType": "library",
+      "root": "projects/honest-magic/pen",
+      "sourceRoot": "projects/honest-magic/pen/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/honest-magic/pen/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/honest-magic/pen/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/honest-magic/pen/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/honest-magic/pen/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
   }
 }

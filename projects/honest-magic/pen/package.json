@@ -1,0 +1,16 @@
+{
+  "name": "@honest-magic/pen",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^15.0.0",
+    "@angular/core": "^15.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/honest-magic/honest-magic.git",
+    "directory": "projects/honest-magic/pen"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}
